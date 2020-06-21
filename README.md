@@ -1,8 +1,8 @@
 # ML-Gaussian-Process
 Gaussian Processes and Machine Learning
 
+# Build docker 
 
-python3.7
-requirements.txt
+docker build -t gp .
 
-
+docker run -i -t --rm -v $(pwd):/app gp bash

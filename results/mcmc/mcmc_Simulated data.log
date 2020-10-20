@@ -1,0 +1,21 @@
+10/18 06:16:19 AM | Generate simulated data
+10/18 06:16:21 AM | Plot generated data
+10/18 06:16:21 AM | Plot prior functions with RBF(1,1)
+10/18 06:16:22 AM | Running MCMC
+10/18 06:16:37 AM | MCMC complete
+10/18 06:16:39 AM | Posterior predictions on the interval of simulated data
+10/18 06:35:43 AM | Generate simulated data
+10/18 06:35:44 AM | Plot generated data
+10/18 06:35:44 AM | Plot prior functions with RBF(1,1)
+10/18 06:35:46 AM | Running MCMC
+10/18 06:36:38 AM | Generate simulated data
+10/18 06:36:39 AM | Plot generated data
+10/18 06:36:39 AM | Plot prior functions with RBF(1,1)
+10/18 06:36:41 AM | Running MCMC
+10/18 06:37:02 AM | MCMC complete
+10/18 06:44:33 AM | Generate simulated data
+10/18 06:44:34 AM | Plot generated data
+10/18 06:44:34 AM | Plot prior functions with RBF(1,1)
+10/18 06:44:36 AM | Running MCMC
+10/18 06:44:50 AM | MCMC complete
+10/18 06:44:53 AM | Posterior predictions on the interval of simulated data

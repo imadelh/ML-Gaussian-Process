@@ -1,12 +1,18 @@
-from numpyro.infer import MCMC, NUTS, HMC
-import time
+import logging
 
-# helper function for doing hmc inference
-def mcmc_inference(model, num_warmup, num_samples, num_chains, rng_key, X, Y):
-    start = time.time()
-    kernel = NUTS(model)
-    mcmc = MCMC(kernel, num_warmup, num_samples, num_chains=num_chains)
-    mcmc.run(rng_key, X, Y)
-    print('\nMCMC elapsed time:', time.time() - start)
-    print(mcmc.print_summary())
-    return mcmc.get_samples()
+
+def get_logger(file_path):
+    """ Make python logger """
+    logger = logging.getLogger("GP")
+    log_format = "%(asctime)s | %(message)s"
+    formatter = logging.Formatter(log_format, datefmt="%m/%d %I:%M:%S %p")
+    file_handler = logging.FileHandler(file_path, mode="a")
+    file_handler.setFormatter(formatter)
+    stream_handler = logging.StreamHandler()
+    stream_handler.setFormatter(formatter)
+
+    logger.addHandler(file_handler)
+    logger.addHandler(stream_handler)
+    logger.setLevel(logging.INFO)
+
+    return logger

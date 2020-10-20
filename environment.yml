@@ -1,0 +1,9 @@
+name: gpr
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.7.7
+  - pip=20.0.2
+  - pip:
+      - -r file:requirements.txt

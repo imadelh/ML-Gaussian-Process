@@ -10,7 +10,7 @@ To run the Gaussian process regression, two options are provided: Conda or Docke
 ## Docker (recommended)
 Docker allows us to create a reproducible environment and avoid any system-related issues.
 
-- Build docker image
+- Build the docker image
 
 ```bash
 docker build -t gpr .
@@ -43,7 +43,7 @@ conda activate data-analysis
 ## Repo structure
 
 - `data/`: Folder containing data used for the Gaussian regression example.
-- `gpr/`: Code for GP regression qnd kernels
+- `gpr/`: Code for GP regression and kernels
     - `gp_regression.py`: Module for GP regression.
     - `kernels.py`: Kernel definition used by Gaussian Processes.
     - `utils.py`: Logger function.
@@ -56,8 +56,8 @@ conda activate data-analysis
 
 Two examples of GP regression are provided:
 
-- `example_mcmc_data.py`: Example on real data (Snelson dataset).
-- `example_mcmc_synthetic.py`: Example on synthetic data (Sinusoidal data).
+- `example_mcmc_data.py`: Example using real data (Snelson dataset).
+- `example_mcmc_synthetic.py`: Example using synthetic data (Sinusoidal data).
   
 To run the example, get inside the Docker container or the Conda environment and run
 
@@ -132,12 +132,12 @@ For a fixed value of the Kernel's parameters, we can plot samples from the prior
 
 ![data](results/mcmc/kernel_priors.png)
 
-Before observing training data, we have no prior knowledge on the relationship between y and x.
+Before observing the training data, we have no prior knowledge of the relationship between y and x.
 
 
 ### Define the GP
 
-To define GP regression module, we need a kernel and priors over the hyperparameters. 
+To define the GP regression object, we need a kernel and priors over the hyperparameters. 
 (The hyperparameters can be given as floats if we want to use SVI for a point estimate)
 
 ```python

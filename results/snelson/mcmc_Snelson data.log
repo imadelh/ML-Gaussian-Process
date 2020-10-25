@@ -1,6 +1,6 @@
-09/04 02:13:43 PM | Load data
-09/04 02:13:43 PM | Plot generated data
-09/04 02:13:43 PM | Plot prior functions with RBF(1,1)
-09/04 02:13:45 PM | Running MCMC
-09/04 02:14:03 PM | MCMC complete
-09/04 02:14:05 PM | Posterior predictions on the interval of simulated data
+10/25 01:59:52 PM | Load data
+10/25 01:59:52 PM | Plot loaded data
+10/25 01:59:52 PM | Plot prior functions with RBF(1,1)
+10/25 01:59:54 PM | Running MCMC
+10/25 02:00:18 PM | MCMC complete
+10/25 02:00:20 PM | Posterior predictions on the interval of the dataset

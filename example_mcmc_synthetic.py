@@ -26,7 +26,7 @@ configuration = {
     # GP parameters
     "kernel": RBFKernel,
     "priors": {
-        # same names as in RBFKernel
+        # Params names as in RBFKernel
         "length": dist.LogNormal(0.0, 1.0),
         "var": dist.LogNormal(0.0, 1.0),
         "noise": dist.LogNormal(0.0, 1.0),

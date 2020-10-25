@@ -1,5 +1,5 @@
 """
-Gaussain Process Regression with MCMC posterior simulation.
+Gaussian Process Regression with MCMC posterior simulation.
 Snelson dataset
 """
 import jax.random as random
@@ -47,7 +47,7 @@ configuration = {
     # GP parameters
     "kernel": RBFKernel,
     "priors": {
-        # same names as in RBFKernel
+        # Params names as in RBFKernel
         "length": dist.LogNormal(0.0, 1.0),
         "var": dist.LogNormal(0.0, 1.0),
         "noise": dist.LogNormal(0.0, 1.0),
@@ -83,7 +83,7 @@ def main():
     plt.grid(True, color="#93a1a1", alpha=0.3)
     plt.savefig("results/snelson/data.png")
     plt.close()
-    logger.info("Plot generated data")
+    logger.info("Plot loaded data")
 
     # 2. Plot prior functions
     logger.info("Plot prior functions with RBF(1,1)")
@@ -111,7 +111,7 @@ def main():
     plt.savefig("results/snelson/kernel_priors.png")
     plt.close()
 
-    # 3. Prior distribution over parameters
+    # 3. Define GPRegression using the kernel and priors over parameters
     gp = GPRegression(config.kernel, config.priors, None)
 
     # 4. MCMC inference
@@ -157,7 +157,7 @@ def main():
     vmap_args = (np.array(vmap_args),)
 
     # Run predictions on test dataset
-    logger.info("Posterior predictions on the interval of simulated data")
+    logger.info("Posterior predictions on the interval of the dataset")
     X_test = noisy_data["X_test"]  # X points where to compute the GP
 
     means, sigma = vmap(

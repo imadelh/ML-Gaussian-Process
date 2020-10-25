@@ -2,6 +2,13 @@ import jax.numpy as np
 
 
 def RBFKernel(X, Z, params: dict):
+    """
+    RBF Kernel - K(X,Z)
+    :param X: Array of data points (x_i).
+    :param Z: Array of data points (z_i.
+    :param params: Parameters of the RBF Kernel.
+    :return: RBFKernel of X and Z.
+    """
 
     assert "length" in params
     assert "var" in params
